@@ -394,3 +394,20 @@ function closeWindowFunc(){
   
   
   // End Debug Functions
+
+
+
+
+
+
+
+  function showRootModal(){
+      document.body.innerHTML += `<div class="rootModal">`
+                                 +`<div class="inner">`
+                                 +`<p class="title">Something Happened</p>`
+                                 +`<p class="description">Yea you can say so something just showed up...sooo</p>`
+                                 +`<button>Yea</button>`
+                                 +`<button>No</button>`
+                                 +`</div>`
+                                 +`</div>`
+                                }
