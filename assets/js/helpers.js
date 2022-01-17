@@ -1,6 +1,5 @@
-////FULLSCREEEN FUNCTION
-
-/* Function to open fullscreen mode */
+//? FULLSCREEEN FUNCTION
+//* Function to open fullscreen mode */
 function openFullscreen() {
   var fullScreenBody = document.body;
   if (fullScreenBody.requestFullscreen) {
@@ -11,31 +10,33 @@ function openFullscreen() {
     fullScreenBody.msRequestFullscreen();
   }
 }
-  
-  
-/* Close fullscreen */
+
+//* Close fullscreen */
 function closeFullscreen() {
-    if (document.exitFullscreen) {
-        document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) { /* Safari */
-        document.webkitExitFullscreen();
-    } else if (document.msExitFullscreen) { /* IE11 */
-        document.msExitFullscreen();
-    }
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { 
+    /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { 
+    /* IE11 */
+    document.msExitFullscreen();
+  }
 }
-  
-function triggerFullscreen(){
-    if (debug.fullScreenMode == true){
-        debug.fullScreenMode = false;
-        closeFullscreen();
-    } else {
-        debug.fullScreenMode = true;
-        openFullscreen();
-    }
+
+//* Toggle Fullscreen */
+function triggerFullscreen() {
+  if (debug.fullScreenMode == true) {
+    debug.fullScreenMode = false;
+    closeFullscreen();
+  } else {
+    debug.fullScreenMode = true;
+    openFullscreen();
+  }
 }
-  
-// Close window function  
-function closeWindowFunc(){
-    window.close();
+
+// ! Close window function  
+function closeWindowFunc() {
+  window.close();
 }
-// End close function.
+//! End close function.
